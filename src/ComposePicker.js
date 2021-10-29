@@ -28,7 +28,6 @@ export default class ComposePicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      locale: null,
       modalVisible: false,
       allowPointerEvents: true,
       showContent: false,
@@ -135,7 +134,7 @@ export default class ComposePicker extends Component {
         onPress={this.onConfirm}
         style={[
           { width: '80%', marginHorizontal: '3%' },
-          this.props.buttonStyle
+          this.props.ButtonStyle
         ]}
       >
         <Text style={[{ fontSize: 20 }, this.props.buttonTextStyle]}>
@@ -180,8 +179,8 @@ export default class ComposePicker extends Component {
             transparent={false}
             visible={this.state.modalVisible}
           >
-            <View style={{ flex: 1, flexDirection: 'column' }}>
-              <View style={[{ height: '90%' },this.props.contentHeight]}>
+            <View stlye={{ flex: 1, flexDirection: 'column' }}>
+              <View style={{ height: '90%' }}>
                 <DateRange
                   headFormat={this.props.headFormat}
                   customStyles={customStyles}
@@ -195,10 +194,9 @@ export default class ComposePicker extends Component {
                   selectedTextColor={this.props.selectedTextColor || undefined}
                   mode={this.props.mode || 'single'}
                   currentDate={this.state.currentDate}
-                  startDateLabel={this.props.startDateText}
-                  endDateLabel={this.props.endDateText}
+                  startDateLabel={this.props.startDateLabel}
+                  endDateLabel={this.props.endDateLabel}
                   onPressBack={this.onPressBack}
-                  locale={this.props.locale ? this.props.locale : "en"}
                 />
               </View>
               <View

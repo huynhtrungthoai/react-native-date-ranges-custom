@@ -89,17 +89,14 @@ export default class NewPicker extends React.Component{
 | **`selectedBgColor`**   | `String`    | Optional. custom your selected date background color e.g {"black"}                                                                     |
 | **`selectedTextColor`** | `String`    | Optional. custom your selected date text color e.g {"black"}                                                                           |
 | **`ButtonStyle`**       | `Object`    | Optional. custom your save button container style                                                                                      |
-| **`buttonText`**        | `Object`    | Optional. custom your save button title                                                                                                |
-| **`buttonTextStyle`**   | `Object`    | Optional. custom your save button Text style                                                                                           |
-| **`startDateText`**     | `Object`    | Optional. custom your start date title                                                                                                 |
-| **`endDateText`**       | `Object`    | Optional. custom your end date title                                                                                                   |
+| **`ButtonTextStyle`**   | `Object`    | Optional. custom your save button Text style                                                                                           |
 | **`returnFormat`**      | `String`    | Optional. custom your datetime format e.g.('YYYY/MM/DD') at onConfirm                                                                  |
 | **`headFormat`**        | `String`    | Optional. custom your datetime format showing at headBlock e.g.('YYYY/MM/DD')                                                          |
 | **`outFormat`**         | `String`    | Optional. custom your datetime format showing at outline touchable filed e.g.('YYYY/MM/DD')                                            |
 | **`mode`**              | `String`    | one of ['range', 'single'] , default as single                                                                                         |
 | **`customButton`**      | `component` | Optional (total custom your button component)e.g.(`<Button></Button>`)                                                                 |
 | **`blockBefore`**       | `Bool`      | optional. default is false, decide blocke date before today or not                                                                     |
-| **`markText`**          | `String`    | optional. default is "Select date", you can custom this prop to label text with ur own                                                 |
+| **`markText`**          | `String`    | optional. default is "選擇日期", you can custom this prop to label text with ur own                                                    |
 | **`buttonText`**        | `String`    | optional. you can modify default button't label with your own                                                                          |
 | **`blockAfter`**        | `Bool`      | optional. default is false, decide blocke date after today or not                                                                      |
 | **`dateSplitter`**      | `String`    | optional. default is '->', decide custom dateSplitter with String                                                                      |

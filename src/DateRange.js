@@ -48,7 +48,7 @@ const styles = {
 export default class DateRange extends Component {
   constructor(props) {
     super(props);
-    const defaultFormat =
+    const defalutFormat =
       !props.mode || props.mode === "single" ? "DD/MM/YYYY" : "DD/MM/YYYY";
     this.state = {
       focusedMonth: moment().startOf("month"),
@@ -58,7 +58,7 @@ export default class DateRange extends Component {
       focus: props.focusedInput || "startDate",
       clearStart: "",
       clearEnd: "",
-      clearSingle: props.currentDate.format(defaultFormat) || "",
+      clearSingle: props.currentDate.format(defalutFormat) || "",
       selectState: "monthAndDate", // or year
       selectedYear: null
     };
@@ -75,11 +75,11 @@ export default class DateRange extends Component {
   };
   onDatesChange = event => {
     this.props.onDatesChange(event);
-    const defaultFormat =
+    const defalutFormat =
       !this.props.mode || this.props.mode === "single"
         ? "DD/MM/YYYY"
         : "DD/MM/YYYY";
-    const headFormat = this.props.headFormat || defaultFormat;
+    const headFormat = this.props.headFormat || defalutFormat;
     const { startDate, endDate, focusedInput, currentDate } = event;
     if (currentDate) {
       this.setState({ currentDate });
@@ -118,11 +118,11 @@ export default class DateRange extends Component {
       focusedMonth: this.state.focusedMonth.year(itemValue),
       currentDate: this.state.currentDate.year(itemValue)
     });
-    const defaultFormat =
+    const defalutFormat =
       !this.props.mode || this.props.mode === "single"
         ? "DD/MM/YYYY"
         : "DD/MM/YYYY";
-    const headFormat = this.props.headFormat || defaultFormat;
+    const headFormat = this.props.headFormat || defalutFormat;
     this.setState({ clearSingle: this.state.currentDate.format(headFormat) });
   };
   onPressBack = () => {
@@ -182,11 +182,11 @@ export default class DateRange extends Component {
               </View>
               <View style={styles.dateContainer}>
                 <Text style={headerDate}>
-                  {this.state.clearStart ? this.state.clearStart : (this.props.startDateText ? this.props.startDateText: "Start Date")}
+                  {this.state.clearStart ? this.state.clearStart : (this.props.startDateLabel ? this.props.startDateLabel : "Start Date")}
                 </Text>
                 <Text style={styles.headTitleText} />
                 <Text style={headerDate}>
-                  {this.state.clearEnd ? this.state.clearEnd : (this.props.endDateText ? this.props.endDateText : "End Date")}
+                  {this.state.clearEnd ? this.state.clearEnd : (this.props.endDateLabel ? this.props.endDateLabel : "End Date")}
                 </Text>
               </View>
             </View>
@@ -253,6 +253,6 @@ DateRange.propTypes = {
   onDatesChange: PropTypes.func,
   isDateBlocked: PropTypes.func,
   onDisableClicked: PropTypes.func,
-  startDateText: PropTypes.string,
-  endDateText: PropTypes.string,
+  startDateLabel: PropTypes.string,
+  endDateLabel: PropTypes.string,
 };
