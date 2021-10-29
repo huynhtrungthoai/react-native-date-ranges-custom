@@ -48,7 +48,7 @@ const styles = {
 export default class DateRange extends Component {
   constructor(props) {
     super(props);
-    const defalutFormat =
+    const defaultFormat =
       !props.mode || props.mode === "single" ? "DD/MM/YYYY" : "DD/MM/YYYY";
     this.state = {
       focusedMonth: moment().startOf("month"),
@@ -58,7 +58,7 @@ export default class DateRange extends Component {
       focus: props.focusedInput || "startDate",
       clearStart: "",
       clearEnd: "",
-      clearSingle: props.currentDate.format(defalutFormat) || "",
+      clearSingle: props.currentDate.format(defaultFormat) || "",
       selectState: "monthAndDate", // or year
       selectedYear: null
     };
@@ -75,11 +75,11 @@ export default class DateRange extends Component {
   };
   onDatesChange = event => {
     this.props.onDatesChange(event);
-    const defalutFormat =
+    const defaultFormat =
       !this.props.mode || this.props.mode === "single"
         ? "DD/MM/YYYY"
         : "DD/MM/YYYY";
-    const headFormat = this.props.headFormat || defalutFormat;
+    const headFormat = this.props.headFormat || defaultFormat;
     const { startDate, endDate, focusedInput, currentDate } = event;
     if (currentDate) {
       this.setState({ currentDate });
@@ -118,11 +118,11 @@ export default class DateRange extends Component {
       focusedMonth: this.state.focusedMonth.year(itemValue),
       currentDate: this.state.currentDate.year(itemValue)
     });
-    const defalutFormat =
+    const defaultFormat =
       !this.props.mode || this.props.mode === "single"
         ? "DD/MM/YYYY"
         : "DD/MM/YYYY";
-    const headFormat = this.props.headFormat || defalutFormat;
+    const headFormat = this.props.headFormat || defaultFormat;
     this.setState({ clearSingle: this.state.currentDate.format(headFormat) });
   };
   onPressBack = () => {

@@ -179,7 +179,7 @@ export default class ComposePicker extends Component {
             transparent={false}
             visible={this.state.modalVisible}
           >
-            <View stlye={{ flex: 1, flexDirection: 'column' }}>
+            <View style={[{ flex: 1, flexDirection: 'column' },this.props.modalContainer]}>
               <View style={{ height: '90%' }}>
                 <DateRange
                   headFormat={this.props.headFormat}
@@ -194,8 +194,8 @@ export default class ComposePicker extends Component {
                   selectedTextColor={this.props.selectedTextColor || undefined}
                   mode={this.props.mode || 'single'}
                   currentDate={this.state.currentDate}
-                  startDateLabel={this.props.startDateLabel}
-                  endDateLabel={this.props.endDateLabel}
+                  startDateLabel={this.props.startDateText}
+                  endDateLabel={this.props.endDateText}
                   onPressBack={this.onPressBack}
                 />
               </View>

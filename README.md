@@ -88,13 +88,12 @@ export default class NewPicker extends React.Component{
 | **`onConfirm`**         | `Function`  | Optional. call function after click button, that would return a date object {startDate:'', endDate:''} e.g( value=>console.log(value)) |
 | **`selectedBgColor`**   | `String`    | Optional. custom your selected date background color e.g {"black"}                                                                     |
 | **`selectedTextColor`** | `String`    | Optional. custom your selected date text color e.g {"black"}                                                                           |
-| **`buttonStyle`**       | `Object`    | Optional. custom your save button container style                                                                                      |
-| **`buttonText`**        | `Object`    | Optional. custom your save button Title style                                                                                          |
+| **`ButtonStyle`**       | `Object`    | Optional. custom your save button container style                                                                                      |
+| **`buttonText`**        | `Object`    | Optional. custom your save button title                                                                                                |
 | **`buttonTextStyle`**   | `Object`    | Optional. custom your save button Text style                                                                                           |
-| style                   |
 | **`startDateText`**     | `Object`    | Optional. custom your start date title                                                                                                 |
-| style                   |
 | **`endDateText`**       | `Object`    | Optional. custom your end date title                                                                                                   |
+| **`modalContainer`**    | `Object`    | Optional. custom your heigh of modal                                                                                                   |
 | **`returnFormat`**      | `String`    | Optional. custom your datetime format e.g.('YYYY/MM/DD') at onConfirm                                                                  |
 | **`headFormat`**        | `String`    | Optional. custom your datetime format showing at headBlock e.g.('YYYY/MM/DD')                                                          |
 | **`outFormat`**         | `String`    | Optional. custom your datetime format showing at outline touchable filed e.g.('YYYY/MM/DD')                                            |
