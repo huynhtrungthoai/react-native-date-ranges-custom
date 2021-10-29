@@ -182,11 +182,11 @@ export default class DateRange extends Component {
               </View>
               <View style={styles.dateContainer}>
                 <Text style={headerDate}>
-                  {this.state.clearStart ? this.state.clearStart : (this.props.startDateLabel ? this.props.startDateLabel : "Start Date")}
+                  {this.state.clearStart ? this.state.clearStart : (this.props.startDateText ? this.props.startDateText: "Start Date")}
                 </Text>
                 <Text style={styles.headTitleText} />
                 <Text style={headerDate}>
-                  {this.state.clearEnd ? this.state.clearEnd : (this.props.endDateLabel ? this.props.endDateLabel : "End Date")}
+                  {this.state.clearEnd ? this.state.clearEnd : (this.props.endDateText ? this.props.endDateText : "End Date")}
                 </Text>
               </View>
             </View>
@@ -253,6 +253,6 @@ DateRange.propTypes = {
   onDatesChange: PropTypes.func,
   isDateBlocked: PropTypes.func,
   onDisableClicked: PropTypes.func,
-  startDateLabel: PropTypes.string,
-  endDateLabel: PropTypes.string,
+  startDateText: PropTypes.string,
+  endDateText: PropTypes.string,
 };

@@ -134,7 +134,7 @@ export default class ComposePicker extends Component {
         onPress={this.onConfirm}
         style={[
           { width: '80%', marginHorizontal: '3%' },
-          this.props.ButtonStyle
+          this.props.buttonStyle
         ]}
       >
         <Text style={[{ fontSize: 20 }, this.props.buttonTextStyle]}>

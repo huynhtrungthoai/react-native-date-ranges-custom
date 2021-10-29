@@ -1,7 +1,8 @@
-
 # react-native-date-ranges
+
 [![npm version](https://img.shields.io/npm/v/react-native-date-ranges.svg?style=flat-square)](https://www.npmjs.com/package/react-native-date-ranges)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-date-ranges.svg?style=flat-square)](https://www.npmjs.com/package/react-native-date-ranges)
+
 ## Getting started
 
 `$ npm install react-native-date-ranges --save`
@@ -9,6 +10,7 @@
 ![alt text](https://raw.githubusercontent.com/pohsiu/react-native-date-ranges/master/ezgif.com-video-to-gif.gif)
 
 ## Usage
+
 ```javascript
 import DatePicker from 'react-native-date-ranges';
 
@@ -18,11 +20,11 @@ import DatePicker from 'react-native-date-ranges';
 	customStyles = { {
 		placeholderText:{ fontSize:20 } // placeHolder style
 		headerStyle : {  },			// title container style
-		headerMarkTitle : { }, // title mark style 
+		headerMarkTitle : { }, // title mark style
 		headerDateTitle: { }, // title Date style
 		contentInput: {}, //content text container style
 		contentText: {}, //after selected text Style
-	} } // optional 
+	} } // optional
 	centerAlign // optional text will align center or not
 	allowFontScaling = {false} // optional
 	placeholder={'Apr 27, 2018 → Jul 10, 2018'}
@@ -35,11 +37,11 @@ import DatePicker from 'react-native-date-ranges';
 	customStyles = { {
 		placeholderText:{ fontSize:20 }, // placeHolder style
 		headerStyle : {  },			// title container style
-		headerMarkTitle : { }, // title mark style 
+		headerMarkTitle : { }, // title mark style
 		headerDateTitle: { }, // title Date style
 		contentInput: {}, //content text container style
 		contentText: {}, //after selected text Style
-	} } // optional 
+	} } // optional
 	centerAlign // optional text will align center or not
 	allowFontScaling = {false} // optional
 	placeholder={'Apr 27, 2018'}
@@ -50,13 +52,13 @@ import DatePicker from 'react-native-date-ranges';
 
 //customButton usage...
 export default class NewPicker extends React.Component{
-	
+
 	customButton = (onConfirm) => (
 		<Button
 			onPress={onConfirm}
 			style={{ container:{ width:'80%', marginHorizontal:'3%' }, text:{ fontSize: 20 } }}
 			primary
-			text={'送出'}
+			text={'Confirm'}
 		/>
 	)
 
@@ -72,29 +74,36 @@ export default class NewPicker extends React.Component{
       />
     )
   }
-} 
+}
 
 ```
-  
+
 ## Props
-| Prop | Type | Description |
-:------------ |:---------------| :-----|
-| **`placeholder`** | `String` | optional. |
-| **`customStyles`** | `Object` | optional. customize style e.g.({ placeholderText:{}, headerStyle:{} ... }) |
-| **`style`** | `Object` | Optional. date picker's style |
-| **`onConfirm`** | `Function` | Optional. call function after click button, that would return a date object {startDate:'', endDate:''} e.g( value=>console.log(value))|
-| **`selectedBgColor`** | `String` | Optional. custom your selected date background color e.g {"black"} |
-| **`selectedTextColor`** | `String` | Optional. custom your selected date text color e.g {"black"} |
-| **`ButtonStyle`** | `Object` | Optional. custom your save button container style |
-| **`ButtonTextStyle`** | `Object` | Optional. custom your save button Text style  |
-| **`returnFormat`** | `String` | Optional. custom your datetime format e.g.('YYYY/MM/DD') at onConfirm |
-| **`headFormat`** | `String` | Optional. custom your datetime format showing at headBlock e.g.('YYYY/MM/DD')|
-| **`outFormat`** | `String` | Optional. custom your datetime format showing at outline touchable filed e.g.('YYYY/MM/DD')|
-| **`mode`** | `String` | one of ['range', 'single'] , default as single|
-| **`customButton`** | `component` | Optional (total custom your button component)e.g.(`<Button></Button>`) | 
-| **`blockBefore`** | `Bool` | optional. default is false, decide blocke date before today or not | 
-| **`markText`** | `String` | optional. default is "選擇日期", you can custom this prop to label text with ur own |
-| **`buttonText`** | `String` | optional. you can modify default button't label with your own | 
-| **`blockAfter`** | `Bool` | optional. default is false, decide blocke date after today or not |
-| **`dateSplitter`** | `String` | optional. default is '->', decide custom dateSplitter with String  |
+
+| Prop                    | Type        | Description                                                                                                                            |
+| :---------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------- |
+| **`placeholder`**       | `String`    | optional.                                                                                                                              |
+| **`customStyles`**      | `Object`    | optional. customize style e.g.({ placeholderText:{}, headerStyle:{} ... })                                                             |
+| **`style`**             | `Object`    | Optional. date picker's style                                                                                                          |
+| **`onConfirm`**         | `Function`  | Optional. call function after click button, that would return a date object {startDate:'', endDate:''} e.g( value=>console.log(value)) |
+| **`selectedBgColor`**   | `String`    | Optional. custom your selected date background color e.g {"black"}                                                                     |
+| **`selectedTextColor`** | `String`    | Optional. custom your selected date text color e.g {"black"}                                                                           |
+| **`buttonStyle`**       | `Object`    | Optional. custom your save button container style                                                                                      |
+| **`buttonText`**        | `Object`    | Optional. custom your save button Title style                                                                                          |
+| **`buttonTextStyle`**   | `Object`    | Optional. custom your save button Text style                                                                                           |
+| style                   |
+| **`startDateText`**     | `Object`    | Optional. custom your start date title                                                                                                 |
+| style                   |
+| **`endDateText`**       | `Object`    | Optional. custom your end date title                                                                                                   |
+| **`returnFormat`**      | `String`    | Optional. custom your datetime format e.g.('YYYY/MM/DD') at onConfirm                                                                  |
+| **`headFormat`**        | `String`    | Optional. custom your datetime format showing at headBlock e.g.('YYYY/MM/DD')                                                          |
+| **`outFormat`**         | `String`    | Optional. custom your datetime format showing at outline touchable filed e.g.('YYYY/MM/DD')                                            |
+| **`mode`**              | `String`    | one of ['range', 'single'] , default as single                                                                                         |
+| **`customButton`**      | `component` | Optional (total custom your button component)e.g.(`<Button></Button>`)                                                                 |
+| **`blockBefore`**       | `Bool`      | optional. default is false, decide blocke date before today or not                                                                     |
+| **`markText`**          | `String`    | optional. default is "Select date", you can custom this prop to label text with ur own                                                 |
+| **`buttonText`**        | `String`    | optional. you can modify default button't label with your own                                                                          |
+| **`blockAfter`**        | `Bool`      | optional. default is false, decide blocke date after today or not                                                                      |
+| **`dateSplitter`**      | `String`    | optional. default is '->', decide custom dateSplitter with String                                                                      |
+
 ....
